@@ -77,7 +77,7 @@ Object.defineProperty(Output.prototype, 'satoshis', {
 });
 
 Output.prototype.invalidSatoshis = function() {
-  if (this._satoshis > MAX_SAFE_INTEGER) {
+  if (this._satoshis > MAX_SAFE_INTEGER && !this._satoshis instanceof BN) {
     return 'transaction txout satoshis greater than max safe integer';
   }
   if (this._satoshis !== this._satoshisBN.toNumber()) {
@@ -91,7 +91,7 @@ Output.prototype.invalidSatoshis = function() {
 
 Output.prototype.toObject = Output.prototype.toJSON = function toObject() {
   var obj = {
-    satoshis: this.satoshis
+    satoshis: this.satoshis instanceof BN ? this.satoshis.toString('hex') : this.satoshis
   };
   obj.script = this._scriptBuffer.toString('hex');
   return obj;
