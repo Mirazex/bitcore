@@ -1,7 +1,7 @@
 {
-  "name": "bitcore-mnemonic",
-  "version": "8.25.38",
-  "description": "BIP39 Mnemonics implemented for Bitcore.",
+  "name": "bitcore-mnemonic-vxxl",
+  "version": "1.0.0",
+  "description": "BIP39 Mnemonics implemented for Vxxl.",
   "author": "BitPay <dev@bitpay.com>",
   "main": "index.js",
   "scripts": {
@@ -43,11 +43,11 @@
     "mocha": "^5.2.0"
   },
   "dependencies": {
-    "bitcore-lib": "^8.25.38",
+    "bitcore-lib-vxxl": "^1.0.0",
     "unorm": "^1.4.1"
   },
   "peerDependencies": {
-    "bitcore-lib": "^8.20.1"
+    "bitcore-lib-vxxl": "^1.0.0"
   },
   "gitHead": "012cc0216a9bc6b195035855bd17149bad41acd1"
 }

@@ -1,6 +1,6 @@
 'use strict';
 
-const bitcore = require('bitcore-lib');
+const bitcore = require('bitcore-lib-vxxl');
 const BN = bitcore.crypto.BN;
 const unorm = require('unorm');
 const _ = bitcore.deps._;
