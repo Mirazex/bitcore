@@ -15,4 +15,4 @@ var spec = {
   }]
 };
 
-module.exports = require('bitcore-lib-vxxl').errors.extend(spec);
+module.exports = require('bitcore-vxxl-lib').errors.extend(spec);
