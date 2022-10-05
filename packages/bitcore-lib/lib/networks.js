@@ -174,6 +174,24 @@ addNetwork({
 var livenet = get('livenet');
 
 addNetwork({
+  name: 'vxxlnet',
+  alias: 'vxxl',
+  pubkeyhash: 70,
+  privatekey: 5,
+  scripthash: 48,
+  bech32prefix: 'tb',
+  xpubkey: 0x0488b21e,
+  xprivkey: 0x0488ade4,
+  networkMagic: 0xa77ca9d0,
+})
+
+/**
+ * @instance
+ * @member Networks#vxxlnet
+ */
+var vxxlnet = get('livenet');
+
+addNetwork({
   name: 'testnet',
   alias: 'test',
   pubkeyhash: 0x6f,
@@ -191,6 +209,7 @@ addNetwork({
     'testnet-seed.bitcoin.schildbach.de'
   ]
 });
+
 
 /**
  * @instance
@@ -249,6 +268,7 @@ module.exports = {
   mainnet: livenet,
   testnet: testnet,
   regtest: regtest,
+  vxxlnet: vxxlnet,
   get: get,
   enableRegtest: enableRegtest,
   disableRegtest: disableRegtest
