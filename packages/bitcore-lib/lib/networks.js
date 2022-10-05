@@ -189,7 +189,7 @@ addNetwork({
  * @instance
  * @member Networks#vxxlnet
  */
-var vxxlnet = get('livenet');
+var vxxlnet = get('vxxlnet');
 
 addNetwork({
   name: 'testnet',
