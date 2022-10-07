@@ -365,6 +365,7 @@ HDPrivateKey.prototype._buildFromObject = function(arg) {
   /* jshint maxcomplexity: 12 */
   // TODO: Type validation
   var buffers = {
+    network: arg.network,
     version: arg.network ? BufferUtil.integerAsBuffer(Network.get(arg.network).xprivkey) : arg.version,
     depth: _.isNumber(arg.depth) ? BufferUtil.integerAsSingleByteBuffer(arg.depth) : arg.depth,
     parentFingerPrint: _.isNumber(arg.parentFingerPrint) ? BufferUtil.integerAsBuffer(arg.parentFingerPrint) : arg.parentFingerPrint,
@@ -477,7 +478,7 @@ HDPrivateKey.prototype._buildFromBuffers = function(arg) {
     }
   }
 
-  var network = Network.get(BufferUtil.integerFromBuffer(arg.version));
+  var network = arg.network || Network.get(BufferUtil.integerFromBuffer(arg.version));
   var xprivkey;
   xprivkey = Base58Check.encode(buffer.Buffer.concat(sequence));
   arg.xprivkey = Buffer.from(xprivkey);
